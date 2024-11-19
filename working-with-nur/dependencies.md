@@ -17,7 +17,7 @@ have a special syntax to define dependencies between tasks, `nur` does not have 
 
 Let's say you have a task called `nur qa` that calls the `nur test` and `nur lint` tasks.
 
-```nu
+```shell
 def "nur test" [] { }
 def "nur lint" [] { }
 
@@ -38,7 +38,7 @@ inside the current `nur` process. If you want to call `nur` as an external comma
 With this very simple and basic concept for running dependencies, you can call dependencies at any place in your
 task. So you could also call a dependency at the end of the task or in the middle of the task.
 
-```nu
+```shell
 def "nur publish" [] { }
 
 def "nur safe-publish" [] {
@@ -55,7 +55,7 @@ output of the task will be what the last line in your task produces, see
 
 As dependencies are normal `nur` task calls, you can pass any parameter to them, like you normally would.
 
-```nu
+```shell
 def "nur publish" [
     --dry-run,
 ] { }

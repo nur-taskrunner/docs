@@ -10,7 +10,7 @@ nav_order: 10
 
 If you are familiar with `rust`/`cargo` you may want to install `nur` using `cargo`:
 
-```nu
+```shell
 > cargo install nur
 ```
 
@@ -27,7 +27,7 @@ adding a separate `nurfile.local` file to your project.
 `nur` tasks are defined by using sub commands to `nur` in your `nurfile`, following the normal
 `nu` syntax using `def`. A simple task could look like this:
 
-```nu
+```shell
 def "nur hello" [] {
     print "Hello world"
 }

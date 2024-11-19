@@ -53,7 +53,7 @@ I recommend to set aliases only in your personal `nurfile.local`.
 
 Example:
 
-```nu
+```shell
 # Install task defined by nurfile
 def "nur install" [] {
     # ...

@@ -25,7 +25,7 @@ this to `$PATH` (or `$env.PATH` in `nu` shell).
 
 POSIX shell example (like Bash, zsh, ...):
 
-```nu
+```shell
 > cargo install nur
 > export PATH="$HOME/.cargo/bin:$PATH"  # put this into your .bashrc, .zshrc or similar
 > nur --version
@@ -33,7 +33,7 @@ POSIX shell example (like Bash, zsh, ...):
 
 `nu` shell example:
 
-```nu
+```shell
 > cargo install nur
 > $env.PATH = ($env.PATH | split row (char esep) | prepend [$'($nu.home-path)/bin'])  # put this into $nu.env-path
 > nur --version

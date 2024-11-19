@@ -10,7 +10,7 @@ nav_order: 50
 If you want to execute any external command you can do that by just calling those commands as you are used to.
 If you for example want to run `poetry install` when using `nur install` you can do that like this:
 
-```nu
+```shell
 def "nur install" [] {
     poetry install
 }
@@ -22,7 +22,7 @@ If you want to use a `nur` to run and wrap any normal command - for example to e
 any subdirectory of your project - I recommend using the following schema (using the `poetry`
 package manager as an example):
 
-```nu
+```shell
 def --wrapped "nur poetry" [...args] {
     poetry ...$args
 }
@@ -48,7 +48,7 @@ named `grep` (`def grep [] { ... }`) which could call the `grep` command using `
 
 Example calling `ls` and `sort` system commands:
 
-```nu
+```shell
 def "nur call-sort" [] {
     ^ls | ^sort
 }
@@ -74,7 +74,7 @@ structured _way to work_ with the data in a great way.
 For example getting the ID of a running container in docker would look somewhat like this in a normal
 UNIX shell:
 
-```nu
+```shell
 docker ps | grep some-name | head -n 1 | awk '{print $1}'
 ```
 
@@ -92,7 +92,7 @@ for more possible input formats.
 
 To get the first container matching using the image `some-name` you could use this command:
 
-```nu
+```shell
 docker ps | from ssv | where IMAGE == "some-name" | get "CONTAINER ID" | first
 ```
 

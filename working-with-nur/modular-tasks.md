@@ -14,7 +14,7 @@ nav_order: 60
 You can define any command you like and need to use. Just know that subcommands to `"nur"` will
 be available as tasks. All other commands will not be available.
 
-```nu
+```shell
 def some-helper [] {
     do-something-useful
 }
@@ -34,14 +34,14 @@ then use those in your `nurfile`.
 
 Basic hello world example:
 
-```nu
+```shell
 # .nur/scripts/hello-world.nu
 export def main [] {
     print "Hello world"
 }
 ```
 
-```nu
+```shell
 # nurfile
 use hello-world.nu
 

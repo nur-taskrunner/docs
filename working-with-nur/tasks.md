@@ -17,7 +17,7 @@ This means you define `nur` tasks like `def "nur something"` - which you can the
 
 The most basic `nur` task could look like this:
 
-```nu
+```shell
 def "nur hello-world" [] {
     print "Hello world"
 }
@@ -50,7 +50,7 @@ accordingly.
 
 An example using `print`:
 
-```nu
+```shell
 def "nur do-something-useful" [] {
     print "We will do something useful now:"
     run-command-1 | print
@@ -68,7 +68,7 @@ as the last line.
 
 ### Named, positional arguments
 
-```nu
+```shell
 def "nur taskname" [
   argument1,
   argument2,
@@ -84,7 +84,7 @@ Details:
 
 ### Flags as parameters
 
-```nu
+```shell
 def "nur taskname" [
   --argument1: string,
   --argument-number2: int,
@@ -106,7 +106,7 @@ Details:
 
 ### Boolean/switch flags
 
-```nu
+```shell
 def "nur taskname" [
   --switch,
 ] {
@@ -127,7 +127,7 @@ Details:
 Arguments can (and should) be typed, you can use `argument_name: type` for doing so. A typed
 argument could look like this:
 
-```nu
+```shell
 def "nur taskname" [
   argument1: string,
   argument2: int,
@@ -144,7 +144,7 @@ available types.
 Also arguments can have a default value, you can use `argument_name = "value"` to set the default value.
 An example using a default value could look like this:
 
-```nu
+```shell
 def "nur taskname" [
   argument1 = "value",
   argument2 = 10,
@@ -157,7 +157,7 @@ def "nur taskname" [
 
 Rest parameters might consume the rest of the arguments:
 
-```nu
+```shell
 def "nur taskname" [
   ...rest
 ] {
@@ -175,7 +175,7 @@ Details:
 
 Example with different kinds of arguments:
 
-```nu
+```shell
 def "nur something" [
     name: string
     optional?: string
@@ -198,7 +198,7 @@ Comments next to any argument will be used to document that argument.
 
 Example task documentation:
 
-```nu
+```shell
 # This is the documentation used for your task
 # you may use multiple lines
 #
@@ -213,7 +213,7 @@ def "nur something" [
 
 The above example will generate the following documentation when running `nur --help something` or `nur something --help`:
 
-```nu
+```shell
 ❯ nur --help something
 This is the documentation used for your task
 you may use multiple lines

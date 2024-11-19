@@ -17,7 +17,7 @@ in your `nurfile`.
 
 A simple "hello world" task could look like this:
 
-```nu
+```shell
 def "nur hello" [] {
     print "Hello world"
 }
