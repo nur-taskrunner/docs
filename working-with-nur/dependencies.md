@@ -35,7 +35,7 @@ inside the current `nur` process. If you want to call `nur` as an external comma
 
 ## Dependency order
 
-With this very simple and basic concept for running dependencies you can call dependencies at any place in your
+With this very simple and basic concept for running dependencies, you can call dependencies at any place in your
 task. So you could also call a dependency at the end of the task or in the middle of the task.
 
 ```shell
@@ -53,7 +53,7 @@ output of the task will be what the last line in your task produces, see
 
 ## Passing parameters to dependencies
 
-As dependencies are normal `nur` task calls you can pass any parameter to them, like you normally would.
+As dependencies are normal `nur` task calls, you can pass any parameter to them, like you normally would.
 
 ```shell
 def "nur publish" [

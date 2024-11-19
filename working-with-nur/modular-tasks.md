@@ -27,12 +27,13 @@ def "nur something" [] {
 
 ## Organising your `nur` helpers into modules
 
-If your helper commands get more sophisticated you may want to use a `nu` module instead of
+If your helper commands get more sophisticated, you may want to use a `nu` module instead of
 putting all of your code into one big `nurfile`. `nur` will automatically add the directory
 called `.nur/scripts/` into `$env.NU_LIB_DIRS`. This allows you to define `nu` modules there and
 then use those in your `nurfile`.
 
 Basic hello world example:
+
 ```shell
 # .nur/scripts/hello-world.nu
 export def main [] {

@@ -47,6 +47,7 @@ The same rule applies to your user defined functions, you would for example prov
 named `grep` (`def grep [] { ... }`) which could call the `grep` command using `^grep`.
 
 Example calling `ls` and `sort` system commands:
+
 ```shell
 def "nur call-sort" [] {
     ^ls | ^sort
@@ -66,12 +67,13 @@ task runner.
 
 Normal UNIX shells always use text to pass data from `stdout` (or `stderr`) to the next command via
 `stdin`. This is pretty easy to implement and a very slim contract to follow. `nu` however works quite
-different from this. Instead of passing test when using pipelines it tried to use structured data -
-think of this like passing JSON between the different command. This increases the flexibility and
-structured way to work with the data in a great way.
+different from this. Instead of passing text when using pipelines, it tries to use structured data.
+Think of this like, passing JSON between the different commands. This increases the flexibility and
+structured _way to work_ with the data in a great way.
 
 For example getting the ID of a running container in docker would look somewhat like this in a normal
 UNIX shell:
+
 ```shell
 docker ps | grep some-name | head -n 1 | awk '{print $1}'
 ```
@@ -89,6 +91,7 @@ Getting the `docker ps` text data input `nu` can for example be done using `dock
 for more possible input formats.
 
 To get the first container matching using the image `some-name` you could use this command:
+
 ```shell
 docker ps | from ssv | where IMAGE == "some-name" | get "CONTAINER ID" | first
 ```

@@ -24,6 +24,7 @@ added in `$HOME/.cargo/bin` (or `$"($env.HOME)/.cargo/bin"` in `nu` shell). Make
 this to `$PATH` (or `$env.PATH` in `nu` shell).
 
 POSIX shell example (like Bash, zsh, ...):
+
 ```shell
 > cargo install nur
 > export PATH="$HOME/.cargo/bin:$PATH"  # put this into your .bashrc, .zshrc or similar
@@ -31,6 +32,7 @@ POSIX shell example (like Bash, zsh, ...):
 ```
 
 `nu` shell example:
+
 ```shell
 > cargo install nur
 > $env.PATH = ($env.PATH | split row (char esep) | prepend [$'($nu.home-path)/bin'])  # put this into $nu.env-path
@@ -49,7 +51,7 @@ steps are documented in the repository:
 [https://github.com/nur-taskrunner/homebrew](https://github.com/nur-taskrunner/homebrew)  
 (This will allow you to just use `brew install nur`)
 
-## Windows 
+## Windows
 
 For Windows you can just use the provided binaries available in each release version. Note the
 `.msi` package might be the easiest to use:
