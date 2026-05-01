@@ -22,6 +22,9 @@ You should add a file called `nurfile` to your project root folder. Add this fil
 as well, to share your tasks with your team. You can also extend the available tasks locally by
 adding a separate `nurfile.local` file to your project.
 
+{: .note }
+You can also use `nurfile.nu` and `nurfile.local.nu` instead, if you like.
+
 ## Adding some tasks
 
 `nur` tasks are defined by using sub commands to `nur` in your `nurfile`, following the normal

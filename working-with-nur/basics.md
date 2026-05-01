@@ -37,6 +37,12 @@ each developer to have their own additional set of tasks.
 > - `nur` tasks need to be defined as subcommands to `"nur"`, like `def "nur something" [] { ... }`
 > - Tasks will always be executed in the directory the `nurfile` was found in, `nur` will `cd` into that directory
 
+{: .note }
+Instead of `nurfile` you can also use `nurfile.nu`. The same is true for `nurfile.local`, which
+can also be `nurfile.local.nu`. Use the `.nu` file extension to improve editor support for things
+like highlighting. Only one variant will be loaded, if you have both the one without the `.nu`
+file extension will be used, the other then will be ignored.
+
 ## Environment provided by `nur`
 
 `nur` will provide the internal state and config in the variable `$nur`, containing:
